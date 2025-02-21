@@ -1,0 +1,13 @@
+#!/bin/bash
+
+. /common.sh
+
+sleep 10
+
+/opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://127.0.0.1:7077 --webui-port 8081
+
+
+
+memory = '10g'
+pyspark_submit_args = ' --driver-memory ' + memory + ' pyspark-shell'
+os.environ["PYSPARK_SUBMIT_ARGS"] = pyspark_submit_args

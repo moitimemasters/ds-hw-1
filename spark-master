@@ -1,0 +1,6 @@
+#!/bin/bash
+
+. /common.sh
+
+
+/opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --ip 127.0.0.1 --port 7077 --webui-port 8080
